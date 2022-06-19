@@ -1,0 +1,58 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "fullName": "Mert Dağıstan",
+        "userName": "mert",
+        "password": "123",
+        "role": "admin"
+      }
+    ],
+    "news":[
+      {
+          "id":1,
+          "title":"Warren Buffett charity lunch fetches winning bid of $19 mln - Reuters",
+          "description":"A lucky, and likely wealthy, person bid more than $19 million to dine with Warren Buffett, in the 21st and final time that the billionaire businessman auctioned a private lunch to benefit a San Francisco charity.",
+          "img":"https://www.reuters.com/pf/resources/images/reuters/reuters-default.png?d=99",
+          "publishedAt":"2022-06-18T02:54:00Z",
+          "authorId":"1",
+          "content": "June 17 (Reuters) - A lucky, and likely wealthy, person bid more than $19 million to dine with Warren Buffett, in the 21st and final time that the billionaire businessman auctioned a private lunch to… [+2290 chars]"
+      },
+      {
+        "id":2,
+        "title":"The US urged to establish common smartphone charger following new EU policy",
+        "description":"After the EU set a requirement for device makers to adopt USB-C, U.S. senators are now urging the country to do the same.",
+        "authorId":"1",
+        "content": "<ul><li>The European Union recently established a new policy for a common smartphone charger by 2024.</li><li>This would require companies to use USB-C with small and medium-sized electronics such as… [+2071 chars]",
+        "publishedAt":"2022-06-18T00:38:27Z",
+        "img":"https://cdn.mos.cms.futurecdn.net/BpwEqhonWNxkp9t6p7Xb5b-1200-80.jpg"
+      },
+      {
+        "id":3,
+        "title":"DOOM Ported to Sega Naomi Arcade Hardware",
+        "description":"Porting DOOM to new hardware and software platforms is a fun pastime for many in the hacker scene. [DragonMinded] noticed that nobody had ported the game to the Sega Naomi arcade hardware, and set ...",
+        "authorId":"1",
+        "content": "Porting DOOM to new hardware and software platforms is a fun pastime for many in the hacker scene. [DragonMinded] noticed that nobody had ported the game to the Sega Naomi arcade hardware, and set ab…",
+        "publishedAt":"2022-06-18T05:00:58Z",
+        "img":"https://hackaday.com/wp-content/uploads/2022/06/FU3ULxLXEAAoDEi-2.jpg"
+      }
+    ],
+    "categories":[
+      {
+        "id":1,
+        "name":"Technology",
+         "url":"technology"
+      },
+      {
+        "id":2,
+        "name":"Business",
+        "url":"business"
+      },
+      {
+        "id":3,
+        "name":"Sport",
+        "url":"sport"
+      }
+    ]
+  }
+  

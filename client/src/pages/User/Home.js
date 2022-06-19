@@ -1,5 +1,5 @@
-import NewsList from "../components/NewsList";
-import NewsSlider from "../components/NewsSlider";
+import NewsList from "../../components/NewsList";
+import NewsSlider from "../../components/NewsSlider";
 
 function Home() {
   return (

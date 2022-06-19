@@ -2,11 +2,11 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from "../../components/Navbar";
 import "../../assets/css/output.css";
-import Home from "../home";
-import NewsDedail from "../newsDetail";
-import CategoryNews from "../categoryNews";
+import Home from "./Home";
+import NewsDedail from "./NewsDetail";
+import CategoryNews from "./CategoryNews";
 
-function UserLayout(props) {
+function UserLayout() {
   return (
     <>
       <Navbar />

@@ -1,8 +1,8 @@
 import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
-const AdminLayout = lazy(() => import("./pages/Layouts/adminLayout"));
-const UserLayout = lazy(() => import("./pages/Layouts/userLayout"));
+const AdminLayout = lazy(() => import("./pages/Admin/AdminLayout"));
+const UserLayout = lazy(() => import("./pages/User/UserLayout"));
 
 function App() {
   return (
