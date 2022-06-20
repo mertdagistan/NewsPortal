@@ -6,7 +6,7 @@ import Home from "./Home";
 import NewsDedail from "./NewsDetail";
 import CategoryNews from "./CategoryNews";
 
-function UserLayout() {
+function GuestLayout() {
   return (
     <>
       <Navbar />
@@ -19,4 +19,4 @@ function UserLayout() {
   );
 }
 
-export default UserLayout;
+export default GuestLayout;

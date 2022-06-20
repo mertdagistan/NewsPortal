@@ -220,7 +220,7 @@ _pkginfo.txt
 !?*.[Cc]ache/
 
 # Others
-# ClientBin/
+ClientBin/
 ~$*
 *~
 *.dbmdl

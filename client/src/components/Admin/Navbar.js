@@ -31,7 +31,7 @@ function Navbar() {
           left-0"
         >
           <div>
-            <a href="#"></a>
+            {/* <a href="/" alt="test"></a> */}
           </div>
 
           <svg
@@ -78,31 +78,21 @@ function Navbar() {
 
               <li>
                 <Link
-                  to={"/admin/haberler"}
+                  to={"/admin/news"}
                   className="md:p-4 py-2 block hover:text-purple-400"
                   href="#"
                 >
-                  Haberler
+                  News
                 </Link>
               </li>
 
               <li>
                 <Link
-                  to={"/admin/üyeler"}
+                  to={"/admin/users"}
                   className="md:p-4 py-2 block hover:text-purple-400"
                   href="#"
                 >
-                  Üyeler
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to={"/admin/kullanicilar"}
-                  className="md:p-4 py-2 block hover:text-purple-400"
-                  href="#"
-                >
-                  Kullanıcılar
+                  Users
                 </Link>
               </li>
             </ul>

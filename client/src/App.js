@@ -2,13 +2,13 @@ import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
 const AdminLayout = lazy(() => import("./pages/Admin/AdminLayout"));
-const UserLayout = lazy(() => import("./pages/User/UserLayout"));
+const GuestLayout = lazy(() => import("./pages/User/GuestLayout"));
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/*" element={<UserLayout />}></Route>
+        <Route path="/*" element={<GuestLayout />}></Route>
         <Route path="admin/*" element={<AdminLayout />}></Route>
       </Routes>
     </>

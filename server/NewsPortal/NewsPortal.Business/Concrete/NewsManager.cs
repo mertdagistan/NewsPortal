@@ -15,10 +15,12 @@ namespace NewsPortal.Business.Concrete
     public class NewsManager : INewsService
     {
         private INewsDataAccess _newsDataAccess;
+        private IUsersDataAccess _userDataAccess;
 
-        public NewsManager(INewsDataAccess newsDataAccess)
+        public NewsManager(INewsDataAccess newsDataAccess, IUsersDataAccess userDataAccess)
         {
             _newsDataAccess = newsDataAccess;
+            _userDataAccess = userDataAccess;
         }
 
         public GetOneResult<NewsInfoVM> CreateNews(NewsEditVM news)
@@ -42,13 +44,14 @@ namespace NewsPortal.Business.Concrete
                     Message = "News created successfully",
                     Entity = new NewsInfoVM
                     {
-                        ID=newsEntity.ID,
+                        ID = newsEntity.ID,
                         Title = news.Title,
                         Content = news.Content,
                         Author = "",
                         Description = news.Description,
                         Image = news.Image,
-                        PublishAt = DateTime.Now
+                        PublishAt = DateTime.Now,
+                        
                     }
                 };
             }
@@ -87,16 +90,19 @@ namespace NewsPortal.Business.Concrete
                     return result;
                 }
 
+                var user = _userDataAccess.GetById(news.Entity.AuthorID);
+
                 // If news is found
                 result.Entity = new NewsInfoVM
                 {
                     ID = news.Entity.ID,
-                    Author=news.Entity.Users.FullName,
-                    Content=news.Entity.Content,
+                    Author = user.Entity.FullName,
+                    Content = news.Entity.Content,
                     Description = news.Entity.Description,
                     Image = news.Entity.Image,
                     PublishAt = news.Entity.PublishAt,
-                    Title = news.Entity.Title
+                    Title = news.Entity.Title,
+                    AuthorID = news.Entity.AuthorID
                 };
             }
             // If something went wrong
@@ -177,7 +183,7 @@ namespace NewsPortal.Business.Concrete
                     Entity = new NewsInfoVM
                     {
                         ID = newsEntity.ID,
-                        Author ="",
+                        Author = "",
                         Content = newsEntity.Content,
                         Description = newsEntity.Description,
                         Image = newsEntity.Image,

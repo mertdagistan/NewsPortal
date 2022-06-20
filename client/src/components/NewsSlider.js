@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Pagination, Navigation, Autoplay } from "swiper";
+import { Pagination,  Autoplay } from "swiper";
 import data from "../data/data.json";
 
 const NewsSlider = () => {

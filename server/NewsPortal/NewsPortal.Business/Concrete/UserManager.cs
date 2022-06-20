@@ -27,7 +27,7 @@ namespace NewsPortal.Business.Concrete
             {
                 FullName = user.FullName,
                 Password = user.Password,
-                Role = user.Role,
+                Role = (Role)Enum.Parse(typeof(Role), user.Role),
                 UserName = user.UserName
             };
 
@@ -40,9 +40,9 @@ namespace NewsPortal.Business.Concrete
                     Message = "User created successfully",
                     Entity = new UserInfoVM
                     {
-                        ID= userEntity.ID,
+                        ID = userEntity.ID,
                         FullName = user.FullName,
-                        Role = ((Role)user.Role).ToString(),
+                        Role = user.Role.ToString(),
                         UserName = user.UserName
                     }
                 };
@@ -58,7 +58,7 @@ namespace NewsPortal.Business.Concrete
             }
         }
 
-        public bool DeleteUser(int id) =>  _userDataAccess.DeleteById(id);
+        public bool DeleteUser(int id) => _userDataAccess.DeleteById(id);
 
         /// <summary>
         /// Get user by id
@@ -147,10 +147,10 @@ namespace NewsPortal.Business.Concrete
         {
             var userEntity = new Users
             {
-                ID=user.ID,
+                ID = user.ID,
                 FullName = user.FullName,
                 Password = user.Password,
-                Role = user.Role,
+                Role = (Role)Enum.Parse(typeof(Role), user.Role),
                 UserName = user.UserName
             };
 
@@ -160,12 +160,12 @@ namespace NewsPortal.Business.Concrete
                 return new GetOneResult<UserInfoVM>
                 {
                     Success = true,
-                    Message = "User created successfully",
+                    Message = "User update successfully",
                     Entity = new UserInfoVM
                     {
-                        ID=user.ID,
+                        ID = user.ID,
                         FullName = user.FullName,
-                        Role = ((Role)user.Role).ToString(),
+                        Role = user.Role.ToString(),
                         UserName = user.UserName
                     }
                 };
@@ -175,7 +175,7 @@ namespace NewsPortal.Business.Concrete
                 return new GetOneResult<UserInfoVM>
                 {
                     Success = false,
-                    Message = "User creation failed",
+                    Message = "User update failed",
                     Entity = null
                 };
             }

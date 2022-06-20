@@ -21,6 +21,6 @@ namespace NewsPortal.Models.VM.Users
         [StringLength(25, ErrorMessage = "Password must be less than 25 characters")]
         [MinLength(6, ErrorMessage = "Password must be longer than 6 characters")]
         public string Password { get; set; }
-        public Role Role { get; set; }
+        public string Role { get; set; }
     }
 }

@@ -18,5 +18,7 @@ namespace NewsPortal.Models.VM.News
         public string Image { get; set; }
 
         public string Author { get; set; }
+
+        public int AuthorID { get; set; }
     }
 }
